@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+	
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Portfolio  </title>
+</head>
+<link href="homepage.css" rel="stylesheet" type="text/css">
+
+<body>
+
+	<div class="header" id="myHeader">
+		<h1 class="glow"> Portfolio Designer.com </h1> </div>
+	<br>
+	
+	<div class="container">
+		<img src="usericon.png" class="userIcon">
+		<br><br>
+		
+		
+		<img src="facebook.png" class="social-btn">
+		<img src="instagram.jpg" class="social-btn">
+		<img src="linkedin-social-media-icon-design-template-vector-22339992.jpg"class="social-btn">
+		<img src="youtube.png" class="social-btn">
+		<img src="github.png" class="social-btn">
+		
+		
+		</div>
+</div>
+	
+<div class="rightPane"> 
+
+	 <ul class="info">
+	<li class="listHeader"> ABOUT ME</li>
+	<li> here is the info about the user </li>
+	</ul>
+		 <ul class="info">
+	<li class="listHeader"> Education </li>
+	<li> HIGH SCHOOL : </li>
+			 <li>  SECONDARY SCHOOL : </li>
+	</ul>
+
+	<ul class="info">
+	<li class="listHeader"> WORK EXPERIENCE </li>
+	<li> here is the info about the user </li>
+	</ul>
+	<ul class="info">
+	<li class="listHeader"> CORE SKILLS </li>
+	<li> here is the info about the user </li>
+	</ul>
+	</table>
+	</div>
+			
+<div class="content">
+	<p> ADDITIONAL TEXT HERE </p>
+</div>
+		</div>
+</body>
+</html> 
+<script> 
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction(){
+	if (window.pageYOffset > sticky) {
+    	header.classList.add("sticky");
+  	}
+	else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
