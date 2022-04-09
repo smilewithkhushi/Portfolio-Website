@@ -4,26 +4,61 @@
   box-sizing: border-box;
 }
 
+@font-face{
+	font-family: fancy;
+	src: url("font/MotherTonguePersonalUse-x3L3m.otf"); }
+@font-face{
+	font-family: shalma;
+	src: url("font/Shalma-Rp0Pe.otf"); }
+@font-face{
+	font-family: MCBold;
+	src: url("font/MomcakeBold-WyonA.otf"); }
+@font-face{
+	font-family: designer;
+	src: url("font/DESIGNER.otf"); }
+@font-face{
+	font-family: JSMedium;
+	src: url("font/JosefinSans-Medium.ttf"); }
+@font-face{
+	font-family: JSLight;
+	src: url("font/JosefinSans-Light.ttf"); }
 
+
+@keyframes slideInLeft {
+    0% {
+    transform: translateX(-8%);}
+    100% {
+	transform: translateX(0);}
+}
+
+@keyframes slideInRight {
+    0% {
+    transform: translateX(25%);}
+    100% {
+	transform: translateX(0);}
+}
 .header{
 	width: 100%;
-	background-color:black;
-	color: white;
-	padding: 10px;
+	padding: 1px;
+	border-bottom: 3px double white;
 }
 
 .sticky {
+	background-color:#0D005F;
   position: fixed;
   top: 0;
-  width: 100%
+	border-bottom: 3px double white;
+  width: 100%;
 }
 
 .sticky + .content {
-  padding-top: 102px;
+	background-color: #0D005F;
+  padding-top: 70px;
+	border-bottom: 3px double white;
 }
 
 body{
-	background-image:url("bg1.jpg");
+	background-image:url("bg2.jpg");
 	background-attachment: scroll;
 	background-blend-mode: color;
 	background-origin: border-box;
@@ -35,13 +70,13 @@ body{
 .userIcon{
 	border: 4px dotted white;
 	border-radius: 50%;
-	width: 40%;
-	height: 40%;
+	width: 45%;
+	height: 45%;
 	transition: transform .2s;
-	margin-left: 32%;
+	margin-left: 30%;
 	margin-right: 20%;
+	margin-bottom: 2%
 }
-
 
 .userIcon:hover{
 	transform: scale(1.2);
@@ -49,11 +84,32 @@ body{
 }
 
 .container{
-  align-items: center;
+box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(255, 255, 255, 1);
+	border: 0px solid white;
+	box-sizing: border-box;
+	width: 90%;
+	align-items: center; 
+}
+
+.leftPane{
   display: inline-block;
-  justify-content: center;
-  width: 35%;
-  
+	width: 35%;
+	text-align: justify;
+	padding-left: 10px;
+}
+
+.rightPane{
+	align-content: left;
+	box-sizing: border-box;	
+	display: inline-block;
+	width: 62%;
+	padding: 5px;
+	animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInLeft;
+	text-align: justify;
 }
 
 
@@ -62,47 +118,51 @@ body{
 	list-style: none;
 }
 li{
+	font-family: JSLight;
 	width: 100%;
 	color: white;
 	padding: 5px;
 	box-sizing: border-box;
-
 }
 
-li:hover{
+.listHeader:hover{
 	transform: scale3d(1.2);
 	box-shadow: 10px 10px 10% grey;
-	background: linear-gradient(to right, blueviolet, pink);
+	background: linear-gradient(to right, rgb(138, 43, 226, 0.3), rgba(0,0,0,0.5));
+	animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideinLeft;
 }
-
-.rightPane{
-	align-content: left;
-	box-sizing: border-box;	
-	display: inline-block;
-	width: 55%;
-	padding: 5px;
-	
+.listHeader{
+	font-family: MCBold;
+	font-size: 2.5vw;
 }
-
 .social-btn{
-	display: block;
+	box-sizing: border-box;
+	display: inline-block;
 	width: 10%;
 	height: 10%;
 	border-radius: 50%;
 	border: 2px double white;
-	margin-left: 10%;
-	margin-bottom: 3px;
+	margin-bottom: 5px;
 }
 .social-btn:hover{
+	animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInRight;
 	
 }
 .content{
 	display: block;
 }
 
-.glow {
-	font-family: "sans-serif";
-  font-size: 20px;
+.glow{
+  font-family: designer;
+  font-size: 3vw;
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -112,12 +172,18 @@ li:hover{
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #FFFFFF , 0 0 40px #FFFFFF, 0 0 50px #FFFFFF, 0 0 60px #FFFFFF, 0 0 70px #FFFFFF;
+    text-shadow: 0 0 5px #C7C7C7, 0 0 10px #C7C7C7, 0 0 15px #C7C7C7 , 0 0 20px #C7C7C7, 0 0 25px #C7C7C7, 0 0 30px #C7C7C7, 0 0 35px #C7C7C7;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
   }
 }
+
+.footer{
+	color: white;
+	border-top: 2px double white;
+	width: 100vw;
+	padding: 2vw;
 
 /*
 TO ADD DYNAMIC COLORFUL HOVER ON IMAGE 
