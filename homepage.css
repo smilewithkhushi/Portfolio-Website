@@ -22,6 +22,9 @@
 @font-face{
 	font-family: JSLight;
 	src: url("font/JosefinSans-Light.ttf"); }
+@font-face{
+	font-family: stdDisplay;
+	src: url("font/WixMadeforDisplayRegular.otf"); }
 
 
 @keyframes slideInLeft {
@@ -64,7 +67,7 @@ body{
 	background-origin: border-box;
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+	font-family: stdDisplay;
 }
 
 .userIcon{
@@ -72,7 +75,7 @@ body{
 	border-radius: 50%;
 	width: 45%;
 	height: 45%;
-	transition: transform .2s;
+	transition: transform .3s;
 	margin-left: 30%;
 	margin-right: 20%;
 	margin-bottom: 2%
@@ -88,6 +91,7 @@ box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(255, 255, 255, 1)
 	border: 0px solid white;
 	box-sizing: border-box;
 	width: 90%;
+	margin: 5vh;
 	align-items: center; 
 }
 
@@ -121,10 +125,14 @@ li{
 	font-family: JSLight;
 	width: 100%;
 	color: white;
-	padding: 5px;
+	padding: 1vh;
 	box-sizing: border-box;
 }
 
+.description{
+	font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';
+	font-size: 3vh;
+}
 .listHeader:hover{
 	transform: scale3d(1.2);
 	box-shadow: 10px 10px 10% grey;
@@ -183,7 +191,8 @@ li{
 	color: white;
 	border-top: 2px double white;
 	width: 100vw;
-	padding: 2vw;
+	margin: 2vh;
+	padding: 5vh;
 
 /*
 TO ADD DYNAMIC COLORFUL HOVER ON IMAGE 
